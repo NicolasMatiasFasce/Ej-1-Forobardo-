@@ -115,3 +115,29 @@ describe "totiPasman" {
 	
 }
 
+describe "lizzyTagliani" {
+
+	test "Lizzy Tagliani comienza con 10 de humor"{
+		assert.equals( 10 , lizzyTagliani.humor() )
+	}
+
+	test "Lizzy Tagliani eleva la voz y no se modifica nada"{
+		assert.equals( lizzyTagliani , lizzyTagliani.elevarVoz() )
+	}
+
+	test "Lizzy Tagliani toma agua y su humor queda en 20"{
+		assert.equals( 20 , lizzyTagliani.tomarAgua() )
+	}
+
+	test "Lizzy Tagliani se calma 15 minutos estando con un mal humor de -20 y aumenta su humor en 30 quedando en 10"{
+		lizzyTagliani.humor(-20)
+		lizzyTagliani.calmarse(15)
+		assert.equals( 10 , lizzyTagliani.humor() )
+	}
+
+	test "Lizzy Tagliani se calma 10 minutos estando de buen humor y no pasa nada"{
+		lizzyTagliani.calmarse(10)
+		assert.equals( 10 , lizzyTagliani.humor() )
+	}
+
+}
