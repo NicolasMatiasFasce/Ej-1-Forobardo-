@@ -1,8 +1,23 @@
-import conductores.polino
+import conductores.*
+import panelistas.*
 
-describe "ejemplo" {
+describe "Fantino" {
 
-	test "Polino es polino" {
-		assert.equals(polino, polino)
+	test "Fantino hace opinar de deportes a Horacio Pagani teniendo 90 de enojo y su enojo baja a 81" {
+		horacioPagani.nivelDeEnojo(90)
+		fantino.hacerOpinarDeDeportesA(horacioPagani)
+		assert.equals(81, horacioPagani.nivelDeEnojo())	
 	}
+
+	test "Fantino hace opinar de deportes a Lizzy Tagliani y su humor queda en 40" {
+		fantino.hacerOpinarDeDeportesA(lizzyTagliani)
+		assert.equals(40, lizzyTagliani.humor())
+	}
+
+	test "Fantino hace opinar de deportes a Toti Pasman, su soberbia queda en 0 y no tiene sed" {
+		fantino.hacerOpinarDeDeportesA(totiPasman)
+		assert.equals(0, totiPasman.soberbia())
+		assert.that( !totiPasman.tieneSed() )
+	}
+
 }
