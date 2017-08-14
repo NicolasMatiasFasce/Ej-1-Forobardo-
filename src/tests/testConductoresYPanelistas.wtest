@@ -103,9 +103,13 @@ describe "totiPasman" {
 		assert.that( !totiPasman.tieneSed() )
 	}
 	
-	test "Toti Pasman se calma 5 minutos y su soberbia queda en 0" {
-		totiPasman.calmarse(5)
-		assert.equals( 0 , totiPasman.soberbia() )
+	test "Toti Pasman se calma 4 minutos y su soberbia queda en 2" {
+		totiPasman.calmarse(4)
+		assert.equals( 2 , totiPasman.soberbia() )
 	}
+	
+	test "Toti Pasman se calma 10 minutos y su soberbia queda en -10" {
+		totiPasman.calmarse(10)
+		assert.equals( -10 , totiPasman.soberbia() )
 
 }
