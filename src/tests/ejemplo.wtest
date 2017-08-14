@@ -81,3 +81,31 @@ describe "horacioPagani" {
 	}
 
 }
+
+describe "totiPasman" {
+
+	test "Toti Pasman comienza con 10 de soberbia"{
+		assert.equals( 10 , totiPasman.soberbia())
+	}
+
+	test "Toti Pasman comienza sin sed"{
+		assert.that( !totiPasman.tieneSed() )
+	}
+
+	test "Toti Pasman eleva la voz, su soberbia queda en 20 y le da sed" {
+		totiPasman.elevarVoz()
+		assert.equals( 20 , totiPasman.soberbia() )
+		assert.that( totiPasman.tieneSed() )
+	}
+
+	test "Toti Pasman toma agua y le saca la sed" {
+		totiPasman.tomarAgua()
+		assert.that( !totiPasman.tieneSed() )
+	}
+	
+	test "Toti Pasman se calma 5 minutos y su soberbia queda en 0" {
+		totiPasman.calmarse(5)
+		assert.equals( 0 , totiPasman.soberbia() )
+	}
+
+}
