@@ -21,3 +21,24 @@ describe "Fantino" {
 	}
 
 }
+
+describe "Polino" {
+		
+	test "Polino hace opinar de chimentos a Horacio Pagani teniendo 20 de enojo y su enojo queda en 0" {
+		horacioPagani.nivelDeEnojo(20)
+		polino.hacerOpinarDeChimentosA(horacioPagani)
+		assert.equals( 0 , horacioPagani.nivelDeEnojo() )
+	}
+
+	test "Polino hace opinar de chimentos a Lizzy Tagliani y su humor queda en 20" {
+		polino.hacerOpinarDeChimentosA(lizzyTagliani)
+		assert.equals( 20 , lizzyTagliani.humor() )
+	}
+
+	test "Polino hace opinar de chimentos a Toti Pasman, su soberbia queda en 0 y no tiene sed" {
+		polino.hacerOpinarDeChimentosA(totiPasman)
+		assert.equals( 0 , totiPasman.soberbia() )
+		assert.that( ! totiPasman.tieneSed() )
+	}
+
+}
