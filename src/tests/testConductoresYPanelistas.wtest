@@ -111,5 +111,7 @@ describe "totiPasman" {
 	test "Toti Pasman se calma 10 minutos y su soberbia queda en -10" {
 		totiPasman.calmarse(10)
 		assert.equals( -10 , totiPasman.soberbia() )
-
+	}
+	
 }
+
